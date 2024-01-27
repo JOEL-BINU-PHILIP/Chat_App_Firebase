@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1092372995035",
+    "firebase_url": "https://flash-chat-11540-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flash-chat-11540",
+    "storage_bucket": "flash-chat-11540.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092372995035:android:72865856fd71d82ba125fe",
+        "android_client_info": {
+          "package_name": "com.JoelBinuPhilip.flash_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHzuJyBRGEMaBJM9pcHYFMkVihpwmDAV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
