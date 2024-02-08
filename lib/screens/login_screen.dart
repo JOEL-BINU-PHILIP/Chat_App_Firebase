@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   tag: 'logo',
                   child: SizedBox(
                     height: 200.0,
-                    child: Image.asset('images/leaf.png'),
+                    child: Image.asset('images/logo.png'),
                   ),
                 ),
               ),

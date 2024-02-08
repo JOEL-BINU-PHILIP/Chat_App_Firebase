@@ -35,7 +35,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   tag: 'logo',
                   child: SizedBox(
                     height: 200.0,
-                    child: Image.asset('images/leaf.png'),
+                    child: Image.asset('images/logo.png'),
                   ),
                 ),
               ),
