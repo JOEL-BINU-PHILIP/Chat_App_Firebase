@@ -1,10 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flash_chat/screens/CameraScreen.dart';
-import 'package:flash_chat/screens/Community.dart';
-import 'package:flash_chat/screens/Dashboard.dart';
-import 'package:flash_chat/screens/GovernmentSchemes.dart';
-import 'package:flash_chat/screens/Tips.dart';
-
+//import 'package:flash_chat/screens/CameraScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
 import 'package:flash_chat/screens/login_screen.dart';
@@ -35,11 +30,6 @@ class FlashChat extends StatelessWidget {
         LoginScreen.id : (context) => const LoginScreen(),
         RegistrationScreen.id: (context) => const RegistrationScreen(),
         ChatScreen.id : (context) => const ChatScreen(),
-        DashBoard.id  : (context) => const DashBoard(),
-        CameraScreen.id  : (context) =>CameraScreen(),
-        Government.id :(context) => const Government(),
-        Tips.id :(context) => const Tips(),
-        Community.id :(context) => const Community()
       },
     );
   }

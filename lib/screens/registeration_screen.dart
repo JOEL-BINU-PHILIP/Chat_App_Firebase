@@ -1,5 +1,4 @@
 import 'package:flash_chat/constants.dart';
-import 'package:flash_chat/screens/Dashboard.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/components/accessButton.dart';
@@ -79,7 +78,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       final newUser =
                           await _auth.createUserWithEmailAndPassword(
                               email: email, password: password);
-                      Navigator.pushNamed(context, DashBoard.id);
+                      Navigator.pushNamed(context, ChatScreen.id);
                                         } catch (e) {
                       print(e);
                     }

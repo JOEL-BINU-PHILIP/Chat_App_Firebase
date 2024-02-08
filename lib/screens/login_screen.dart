@@ -1,6 +1,5 @@
 import 'package:flash_chat/components/accessButton.dart';
 import 'package:flash_chat/constants.dart';
-import 'package:flash_chat/screens/Dashboard.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -31,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       User? user = userCredential.user;
       if (user != null) {
-        Navigator.pushNamed(context, DashBoard.id);
+        Navigator.pushNamed(context, ChatScreen.id);
       }
     } on FirebaseAuthException {
       // Handle authentication errors
@@ -95,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     buttonText: 'Log In',
                     whenPressed: () {
                       if (email.isEmpty) {
-                        Navigator.pushNamed(context, DashBoard.id);
+                        Navigator.pushNamed(context, ChatScreen.id);
                       }
                       UserVerification();
                     }),

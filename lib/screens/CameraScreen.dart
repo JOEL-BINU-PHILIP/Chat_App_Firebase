@@ -1,43 +1,43 @@
-import 'package:flutter/material.dart';
-import 'dart:io';
-import 'dart:io';
-import 'dart:typed_data';
-import 'package:image_picker/image_picker.dart';
+// import 'package:flutter/material.dart';
+// import 'dart:io';
+// import 'dart:io';
+// import 'dart:typed_data';
+// import 'package:image_picker/image_picker.dart';
 
 
-class CameraScreen extends StatefulWidget {
-  const CameraScreen({super.key});
-  static String id = 'CameraScreen';
-  @override
-  State<CameraScreen> createState() => _CameraScreenState();
-}
+// class CameraScreen extends StatefulWidget {
+//   const CameraScreen({super.key});
+//   static String id = 'CameraScreen';
+//   @override
+//   State<CameraScreen> createState() => _CameraScreenState();
+// }
 
-class _CameraScreenState extends State<CameraScreen> {
-  XFile? images;
+// class _CameraScreenState extends State<CameraScreen> {
+//   XFile? images;
  
- final imagePicker = ImagePicker();
-  Future getImage() async {
-    final image = await imagePicker.pickImage(source: ImageSource.camera);
-    setState(() {
-      images = File(image!.path ) as XFile?;
-    });
-  }
+//  final imagePicker = ImagePicker();
+//   Future getImage() async {
+//     final image = await imagePicker.pickImage(source: ImageSource.camera);
+//     setState(() {
+//       images = File(image!.path ) as XFile?;
+//     });
+//   }
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child:
-              images == null ? Text("No Image Selected") : Image.file(images! as File),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: getImage,
-          backgroundColor: Colors.amber,
-          child: Icon(Icons.camera_alt),
-        ),
-      );
-    }
-  }
+//     @override
+//     Widget build(BuildContext context) {
+//       return Scaffold(
+//         body: Center(
+//           child:
+//               images == null ? Text("No Image Selected") : Image.file(images! as File),
+//         ),
+//         floatingActionButton: FloatingActionButton(
+//           onPressed: getImage,
+//           backgroundColor: Colors.amber,
+//           child: Icon(Icons.camera_alt),
+//         ),
+//       );
+//     }
+//   }
   
 
 
