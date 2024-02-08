@@ -127,17 +127,22 @@ class MessageStream extends StatelessWidget {
               final messages = message.data();
               final messageText = messages['text'];
               final messageSender = messages['sender'];
-              final messageBubble = MessageBubble(sender: messageSender, text: messageText);
+              final currentUser = loggedInUser?.email;
+              if(currentUser == messageSender){
+                //The message is from the loggedin User
+              }
+              final messageBubble =
+                  MessageBubble(sender: messageSender, text: messageText , isMe: currentUser == messageSender,);
               messageBubbles.add(messageBubble);
-                        }
+            }
           } else {
             return const Center(
               child: Text('Hello'),
             );
           }
           return Expanded(
-            child: ListView(                        
-                children: messageBubbles,
+            child: ListView(
+              children: messageBubbles,
             ),
           );
         });
@@ -145,9 +150,10 @@ class MessageStream extends StatelessWidget {
 }
 
 class MessageBubble extends StatelessWidget {
-  const MessageBubble({super.key, required this.sender, required this.text});
+  const MessageBubble({super.key, required this.sender, required this.text , required this.isMe});
   final String sender;
   final String text;
+  final bool isMe;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -156,12 +162,19 @@ class MessageBubble extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Material(
-            borderRadius: const BorderRadius.only(topLeft: Radius.circular(10),bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+            borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10)),
             elevation: 5.0,
-            color: Colors.lightBlueAccent,
+            color: isMe == true ? Colors.yellow : Colors.lightBlueAccent,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 8,top: 8,left: 15, right: 15),
-              child: Text(text, style: const TextStyle(fontSize: 17,color: Colors.white),),
+              padding:
+                  const EdgeInsets.only(bottom: 8, top: 8, left: 15, right: 15),
+              child: Text(
+                text,
+                style: const TextStyle(fontSize: 17, color: Colors.white),
+              ),
             ),
           ),
           Text(

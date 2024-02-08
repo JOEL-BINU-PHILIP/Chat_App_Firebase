@@ -36,6 +36,10 @@ class _LoginScreenState extends State<LoginScreen> {
       // Handle authentication errors
       print('User is not a legitiate User');
     }
+    catch(e){
+      print('User is not a legitiate User');
+    }
+
     setState(() {
       showSpinner = false;
     });

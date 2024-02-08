@@ -11,7 +11,7 @@ class AnimatedCard extends StatelessWidget {
         style: kAnimatedCardTextStyle,
         child: AnimatedTextKit(
           animatedTexts: [
-            TypewriterAnimatedText('FARM DOST',
+            TypewriterAnimatedText('Flash Chat',
                 speed: const Duration(milliseconds: 300))
           ],
         ),
